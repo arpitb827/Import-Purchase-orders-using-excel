@@ -22,9 +22,20 @@
             	</form>
             </field>
         </record>
+        
+        
+        <act_window name="Import Purchase orders"
+            context="{'search_default_draft': 1, 'search_default_approved': False}"
+            res_model="wiz.import.purchase.order"
+            src_model="purchase.order"
+            view_mode="form"
+            target="new"
+            multi="True"
+            key2="client_action_multi"
+            id="action_view_import_po_wizard"/>
        
        <!-- action wizard-->
-       
+       <!-- 
      <record id="action_import_purchase_orders" model="ir.actions.act_window">
             <field name="name">Import Purchase Orders</field>
             <field name="type">ir.actions.act_window</field>
@@ -41,6 +52,6 @@
             sequence="2"
             />
             
-    <menuitem action="action_import_purchase_orders" id="sub_menu_action_import_purchase_orders" parent="menu_action_import_purchase_orders" />
+    <menuitem action="action_import_purchase_orders" id="sub_menu_action_import_purchase_orders" parent="menu_action_import_purchase_orders" /> -->
 	</data>
 </openerp>
